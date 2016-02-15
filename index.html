@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<textarea id='input'>
+body {
+  background: #000 url('http://test.net/photo.png') 50% no-repeat;
+  color: #000;
+  font: normal 12px/1.2 arial, verdana, tahoma, 'sans-serif';
+}
+a:hover,
+a:active { color: #000000; }
+p + p { margin-top: 10px; }
+#test {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+.element {
+  background-color: red yellow #222;
+  border: 1px solid #444444;
+}
+.element.style1 { border-top-color: rgba(0,0,200, 0.4) rgb( 20, 10, 40); }
+</textarea>
+<pre id='output'></pre>
+
+<script type="text/javascript" src="easycustomcss.js"></script>
+<script type="text/javascript">
+/*
+	check the output */
+	console.log(customizr.apply(document.getElementById('input').value).extract());
+</script>
+
+</body>
+</html>
